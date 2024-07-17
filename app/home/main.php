@@ -37,7 +37,7 @@ class main extends AWS_CONTROLLER
 
 	public function invite_action()
 	{
-		$this->crumb(_t('邀请我回复的问题'));
+		$this->crumb(_t('邀请我回复的帖子'));
 
 		TPL::output('home/invite');
 	}

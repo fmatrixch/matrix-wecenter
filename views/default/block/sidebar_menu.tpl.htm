@@ -18,7 +18,7 @@
 			</li>
 			<li>
 				<a href="<?php echo url_rewrite(); ?>/home/invite/"<?php if ($_GET['app'] == 'home' AND $_GET['act'] == 'invite') { ?> class="active"<?php } ?>>
-					<?php echo _t('邀请我回复的问题'); ?><?php if ($this->user_info['invite_count']) { ?><span class="badge"><?php echo $this->user_info['invite_count']; ?></span><?php } ?>
+					<?php echo _t('邀请我回复的帖子'); ?><?php if ($this->user_info['invite_count']) { ?><span class="badge"><?php echo $this->user_info['invite_count']; ?></span><?php } ?>
 				</a>
 			</li>
 		</ul>

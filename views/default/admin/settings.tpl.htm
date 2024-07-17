@@ -1205,7 +1205,7 @@
 				<tr>
 					<td>
 						<div class="form-group">
-							<span class="col-sm-4 col-xs-3 control-label"><?php echo _t('发布问题'); ?>:</span>
+							<span class="col-sm-4 col-xs-3 control-label"><?php echo _t('发布帖子'); ?>:</span>
 							<div class="col-sm-5 col-xs-8">
 								<input name="currency_system_config_new_question" type="text" class="form-control" value="<?php echo htmlspecialchars($this->setting['currency_system_config_new_question']); ?>"/>
 							</div>
@@ -1364,7 +1364,7 @@
 				<tr>
 					<td>
 						<div class="form-group">
-							<span class="col-sm-4 col-xs-3 control-label"><?php echo _t('用户对每个问题的回复限制'); ?>:</span>
+							<span class="col-sm-4 col-xs-3 control-label"><?php echo _t('用户对每个帖子的回复限制'); ?>:</span>
 							<div class="col-sm-6 col-xs-8">
 								<label><input type="radio" name="answer_unique" value="Y"<?php if ($this->setting['answer_unique'] == 'Y') { ?> checked="checked"<?php } ?> /><?php echo _t('只允许回复一次'); ?></label>
 								<label class="col-md-offset-1"><input type="radio" name="answer_unique" value="N"<?php if ($this->setting['answer_unique'] != 'Y') { ?> checked="checked"<?php } ?> /><?php echo _t('不限制'); ?></label>
@@ -1375,7 +1375,7 @@
 				<tr>
 					<td>
 						<div class="form-group">
-							<span class="col-sm-4 col-xs-3 control-label"><?php echo _t('允许用户回复自己发起的问题'); ?>:</span>
+							<span class="col-sm-4 col-xs-3 control-label"><?php echo _t('允许用户回复自己发起的帖子'); ?>:</span>
 							<div class="col-sm-6 col-xs-8">
 								<div class="btn-group mod-btn">
 									<label type="button" class="btn mod-btn-color">
@@ -1393,7 +1393,7 @@
 				<tr>
 					<td>
 						<div class="form-group">
-							<span class="col-sm-4 col-xs-3 control-label"><?php echo _t('要求问题包含问号'); ?>:</span>
+							<span class="col-sm-4 col-xs-3 control-label"><?php echo _t('要求帖子包含问号'); ?>:</span>
 							<div class="col-sm-6 col-xs-8">
 								<div class="btn-group mod-btn">
 									<label type="button" class="btn mod-btn-color">
@@ -1487,7 +1487,7 @@
 				<tr>
 					<td>
 						<div class="form-group">
-							<span class="col-sm-4 col-xs-3 control-label"><?php echo _t('问题正文最小字数限制'); ?>:</span>
+							<span class="col-sm-4 col-xs-3 control-label"><?php echo _t('帖子正文最小字数限制'); ?>:</span>
 							<div class="col-sm-5 col-xs-8">
 								<input name="question_body_length_min" class="form-control" type="text" value="<?php echo htmlspecialchars($this->setting['question_body_length_min']); ?>"/>
 
@@ -1499,7 +1499,7 @@
 				<tr>
 					<td>
 						<div class="form-group">
-							<span class="col-sm-4 col-xs-3 control-label"><?php echo _t('问题正文最大字数限制'); ?>:</span>
+							<span class="col-sm-4 col-xs-3 control-label"><?php echo _t('帖子正文最大字数限制'); ?>:</span>
 							<div class="col-sm-5 col-xs-8">
 								<input name="question_body_length_max" class="form-control" type="text" value="<?php echo htmlspecialchars($this->setting['question_body_length_max']); ?>"/>
 
@@ -1585,7 +1585,7 @@
 				<tr>
 					<td>
 						<div class="form-group">
-							<span class="col-sm-4 col-xs-3 control-label"><?php echo _t('问题回复最小字数限制'); ?>:</span>
+							<span class="col-sm-4 col-xs-3 control-label"><?php echo _t('帖子回复最小字数限制'); ?>:</span>
 							<div class="col-sm-5 col-xs-8">
 								<input name="question_reply_length_min" class="form-control" type="text" value="<?php echo htmlspecialchars($this->setting['question_reply_length_min']); ?>"/>
 
@@ -1597,7 +1597,7 @@
 				<tr>
 					<td>
 						<div class="form-group">
-							<span class="col-sm-4 col-xs-3 control-label"><?php echo _t('问题回复最大字数限制'); ?>:</span>
+							<span class="col-sm-4 col-xs-3 control-label"><?php echo _t('帖子回复最大字数限制'); ?>:</span>
 							<div class="col-sm-5 col-xs-8">
 								<input name="question_reply_length_max" class="form-control" type="text" value="<?php echo htmlspecialchars($this->setting['question_reply_length_max']); ?>"/>
 

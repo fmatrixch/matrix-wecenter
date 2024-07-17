@@ -10,7 +10,7 @@
 		<div class="row">
 			<div class="col-sm-12 aw-global-tips">
 				<div class="alert alert-warning fade in">
-					<a href="<?php echo url_rewrite(); ?>/question/<?php echo $this->redirected_from['id']; ?>"><?php echo CF::title($this->redirected_from); ?></a> <?php echo _t('已与本问题合并'); ?>
+					<a href="<?php echo url_rewrite(); ?>/question/<?php echo $this->redirected_from['id']; ?>"><?php echo CF::title($this->redirected_from); ?></a> <?php echo _t('已与本帖子合并'); ?>
 				</div>
 			</div>
 		</div>
@@ -21,7 +21,7 @@
 		<div class="row">
 			<div class="col-sm-12 aw-global-tips">
 				<div class="alert alert-danger fade in">
-					<?php echo _t('本问题已被合并到'); ?>: <a href="<?php echo url_rewrite(); ?>/question/id-<?php echo $this->redirect_info['id']; ?>__rf-<?php echo $this->question_info['id']; ?>"><?php echo CF::title($this->redirect_info); ?></a>
+					<?php echo _t('本帖子已被合并到'); ?>: <a href="<?php echo url_rewrite(); ?>/question/id-<?php echo $this->redirect_info['id']; ?>__rf-<?php echo $this->question_info['id']; ?>"><?php echo CF::title($this->redirect_info); ?></a>
 				</div>
 			</div>
 		</div>
@@ -87,7 +87,7 @@
 
 										<?php if ($this->user_info['permission']['is_moderator']) { ?>
 											<li>
-												<a href="javascript:;" onclick="AWS.confirm('<?php echo _t('确认删除?'); ?>', function(){AWS.ajax_request(G_BASE_URL + '/question/ajax/remove_question/', 'question_id=<?php echo $this->question_info['id']; ?>');});"><?php echo _t('删除问题'); ?></a>
+												<a href="javascript:;" onclick="AWS.confirm('<?php echo _t('确认删除?'); ?>', function(){AWS.ajax_request(G_BASE_URL + '/question/ajax/remove_question/', 'question_id=<?php echo $this->question_info['id']; ?>');});"><?php echo _t('删除帖子'); ?></a>
 											</li>
 											<li>
 												<a href="javascript:;" onclick="AWS.prompt('<?php echo _t('请输入新的 UID'); ?>', '<?php echo $this->question_info['uid']; ?>', function(text){AWS.ajax_request(G_BASE_URL + '/content/ajax/change_uid/', 'uid=' + encodeURIComponent(text) + '&item_type=question&item_id=<?php echo $this->question_info['id']; ?>');});"><?php echo _t('变更作者'); ?></a>
@@ -242,7 +242,7 @@
 						</div>
 					</div>
 
-					<!-- 问题回复 -->
+					<!-- 帖子回复 -->
 					<div class="aw-mod">
 						<?php if ($this->pagination) { ?>
 							<div class="clearfix"><?php TPL::include('global/pagination.tpl.htm'); ?></div>
@@ -302,7 +302,7 @@
 							<div class="clearfix"><?php TPL::include('global/pagination.tpl.htm'); ?></div>
 						<?php } ?>
 					</div>
-					<!-- end 问题回复 -->
+					<!-- end 帖子回复 -->
 
 					<!-- 回应编辑器 -->
 					<div class="aw-mod aw-reply-box question">
@@ -312,9 +312,9 @@
 						<?php } else if (!$this->user_id) { ?>
 						<p align="center"><?php echo _t('要发言请先<a href="%s0">登录</a>或<a href="%s1">注册</a>', array(url_rewrite() . '/login/', url_rewrite(). '/register/')); ?></p>
 						<?php } else if ($this->user_answered) { ?>
-						<p align="center"><?php echo _t('一个问题只能回复一次'); ?></p>
+						<p align="center"><?php echo _t('一个帖子只能回复一次'); ?></p>
 						<?php } else if ((S::get('answer_self_question') == 'N') AND ($this->user_id == $this->question_info['uid'])) { ?>
-						<p align="center"><?php echo _t('不能回复自己发布的问题, 你可以修改问题内容'); ?></p>
+						<p align="center"><?php echo _t('不能回复自己发布的帖子, 你可以修改帖子内容'); ?></p>
 						<?php } else { ?>
 						<form action="<?php echo url_rewrite(); ?>/publish/ajax/publish_answer/" onsubmit="return false;" method="post" id="answer_form" class="question_answer_form">
 						<input type="hidden" name="question_id" value="<?php echo $this->question_info['id']; ?>" />
@@ -498,7 +498,7 @@ function reply_callback() {
 	$('.question_answer_form').detach();
 	if ($('.aw-reply-box.question').length)
 	{
-		$('.aw-reply-box').append('<p align="center"><?php echo _t('一个问题只能回复一次'); ?></p>');
+		$('.aw-reply-box').append('<p align="center"><?php echo _t('一个帖子只能回复一次'); ?></p>');
 	}
 <?php } ?>
 	$('.aw-mod.aw-reply-box textarea').css('height', '329px');

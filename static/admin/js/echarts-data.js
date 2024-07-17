@@ -258,7 +258,7 @@ Echarts.prototype = {
                 break;
 
             case 'new_question':
-                arr.push('新增问题');
+                arr.push('新增帖子');
                 break;
 
             case 'new_user':

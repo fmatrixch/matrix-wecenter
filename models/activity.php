@@ -171,7 +171,7 @@ class activity_class extends AWS_MODEL
 			}
 		}
 
-		// 获取问题和回答
+		// 获取帖子和回答
 		if ($answer_ids)
 		{
 			$answers = $this->model('post')->get_posts_by_ids('question_reply', $answer_ids);

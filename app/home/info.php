@@ -29,7 +29,7 @@ class info extends AWS_CONTROLLER
 		return $rule_action;
 	}
 
-	// 邀请我回答的问题
+	// 邀请我回答的帖子
 	public function invites_action()
 	{
 		$per_page = S::get_int('contents_per_page');

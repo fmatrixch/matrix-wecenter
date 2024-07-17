@@ -107,7 +107,7 @@ $config[] = array(
 
 		array(
 			'id' => 301,
-			'title' => _t('问题列表'),
+			'title' => _t('帖子列表'),
 			'url' => '/admin/question/question_list/'
 		),
 

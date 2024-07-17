@@ -16,7 +16,7 @@
 							<a href="<?php echo url_rewrite(); ?>/topic/<?php echo FORMAT::text($val['topic_title']); ?>" class="text" data-id="<?php echo $val['topic_id']; ?>"><?php echo FORMAT::text($val['topic_title']); ?></a>
 						</span>
 					</p>
-					<p><?php echo _t('%s 个问题', '<b>' . $val['discuss_count'] . '</b>'); ?>, <?php echo _t('%s 人关注', '<b>' . $val['focus_count'] . '</b>'); ?></p>
+					<p><?php echo _t('%s 个帖子', '<b>' . $val['discuss_count'] . '</b>'); ?>, <?php echo _t('%s 人关注', '<b>' . $val['focus_count'] . '</b>'); ?></p>
 				</dd>
 			</dl>
 		<?php } ?>

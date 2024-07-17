@@ -332,7 +332,7 @@ class publish_class extends AWS_MODEL
 		{
 			if (!$this->model('post')->has_user_relpied_to_thread('question', $data['parent_id'], $data['uid']))
 			{
-				$this->model('currency')->process($parent_info['uid'], 'REPLIED', S::get('currency_system_config_question_replied'), '问题收到回应', $data['parent_id'], 'question');
+				$this->model('currency')->process($parent_info['uid'], 'REPLIED', S::get('currency_system_config_question_replied'), '帖子收到回应', $data['parent_id'], 'question');
 			}
 		}
 
@@ -639,7 +639,7 @@ class publish_class extends AWS_MODEL
 		}
 
 		$is_anonymous = ($real_uid != $data['uid']);
-		$this->model('currency')->process($real_uid, 'NEW_THREAD', S::get('currency_system_config_new_question'), '发布问题', null, null, $is_anonymous);
+		$this->model('currency')->process($real_uid, 'NEW_THREAD', S::get('currency_system_config_new_question'), '发布帖子', null, null, $is_anonymous);
 		return $item_id;
 	}
 
@@ -690,7 +690,7 @@ class publish_class extends AWS_MODEL
 		if ($pay)
 		{
 			$is_anonymous = ($real_uid != $data['uid']);
-			$this->model('currency')->process($real_uid, 'REPLY', S::get('currency_system_config_reply_question'), '回应问题', $data['parent_id'], 'question', $is_anonymous);
+			$this->model('currency')->process($real_uid, 'REPLY', S::get('currency_system_config_reply_question'), '回应帖子', $data['parent_id'], 'question', $is_anonymous);
 		}
 		return $item_id;
 	}

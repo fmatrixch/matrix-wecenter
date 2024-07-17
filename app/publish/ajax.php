@@ -157,20 +157,20 @@ class ajax extends AWS_CONTROLLER
 
 		if ($thread_type == 'question')
 		{
-			// 判断是否已回复过问题
+			// 判断是否已回复过帖子
 			if (S::get('answer_unique') == 'Y' AND $replied)
 			{
 				if ($replied == 2)
 				{
-					H::ajax_error((_t('你已经使用延迟显示功能回复过该问题')));
+					H::ajax_error((_t('你已经使用延迟显示功能回复过该帖子')));
 				}
-				H::ajax_error((_t('一个问题只能回复一次，你可以编辑回复过的回复')));
+				H::ajax_error((_t('一个帖子只能回复一次，你可以编辑回复过的回复')));
 			}
 
-			// 判断是否是问题发起者
+			// 判断是否是帖子发起者
 			if (S::get('answer_self_question') == 'N' AND $thread_info['uid'] == $this->user_id)
 			{
-				H::ajax_error((_t('不能回复自己发布的问题，你可以修改问题内容')));
+				H::ajax_error((_t('不能回复自己发布的帖子，你可以修改帖子内容')));
 			}
 		}
 

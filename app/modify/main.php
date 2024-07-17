@@ -29,12 +29,12 @@ class main extends AWS_CONTROLLER
 	{
 		if (!$thread_info = $this->model('post')->get_thread_info_by_id('question', H::GET('id')))
 		{
-			H::redirect_msg(_t('指定问题不存在'));
+			H::redirect_msg(_t('指定帖子不存在'));
 		}
 
 		if (!can_edit_post($thread_info['uid'], $this->user_info))
 		{
-			H::redirect_msg(_t('你没有权限编辑这个问题'), '/question/' . $thread_info['id']);
+			H::redirect_msg(_t('你没有权限编辑这个帖子'), '/question/' . $thread_info['id']);
 		}
 
 		if (S::get('category_enable') != 'N')

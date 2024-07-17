@@ -84,7 +84,7 @@ AWS.User = {
 		AWS.textBox(_t('分享'), title + '\r\n' + url);
 	},
 
-	// 删除别人邀请我回复的问题
+	// 删除别人邀请我回复的帖子
 	question_invite_delete: function(selector, question_invite_id) {
 		$.post(G_BASE_URL + '/question/ajax/question_invite_delete/', 'question_invite_id=' + question_invite_id, function(result) {
 			if (result.err) {
@@ -95,7 +95,7 @@ AWS.User = {
 		}, 'json');
 	},
 
-	// 邀请用户回答问题
+	// 邀请用户回答帖子
 	invite_user: function(selector, img) {
 		$.post(G_BASE_URL + '/question/ajax/save_invite/', {
 			'question_id': QUESTION_ID,
@@ -114,7 +114,7 @@ AWS.User = {
 		}, 'json');
 	},
 
-	// 取消邀请用户回答问题
+	// 取消邀请用户回答帖子
 	disinvite_user: function(selector) {
 		$.get(G_BASE_URL + '/question/ajax/cancel_question_invite/question_id-' + QUESTION_ID + "__recipients_uid-" + selector.attr('data-id'), function(result) {
 			if (!result.err) {

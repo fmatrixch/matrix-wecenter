@@ -65,8 +65,8 @@ class vote_class extends AWS_MODEL
 		switch ($type)
 		{
 			case 'question':
-				$note_agree = '赞同问题';
-				$note_item_agreed = '问题被赞同';
+				$note_agree = '赞同帖子';
+				$note_item_agreed = '帖子被赞同';
 				break;
 
 			case 'question_reply':
@@ -107,8 +107,8 @@ class vote_class extends AWS_MODEL
 		switch ($type)
 		{
 			case 'question':
-				$note_disagree = '反对问题';
-				$note_item_disagreed = '问题被反对';
+				$note_disagree = '反对帖子';
+				$note_item_disagreed = '帖子被反对';
 				break;
 
 			case 'question_reply':

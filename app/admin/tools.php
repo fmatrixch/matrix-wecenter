@@ -55,7 +55,7 @@ class tools extends AWS_ADMIN_CONTROLLER
                 $this->model('threadindex')->set_posts_index($val['id'], 'question', $val);
             }
 
-            H::redirect_msg(_t('正在更新问题搜索索引') . ', ' . _t('批次: %s', H::GET('page')), '/admin/tools/update_question_search_index/page-' . (H::GET('page') + 1) . '__per_page-' . H::GET('per_page'));
+            H::redirect_msg(_t('正在更新帖子搜索索引') . ', ' . _t('批次: %s', H::GET('page')), '/admin/tools/update_question_search_index/page-' . (H::GET('page') + 1) . '__per_page-' . H::GET('per_page'));
         }
         else
         {

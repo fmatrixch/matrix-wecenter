@@ -97,7 +97,7 @@ class ajax extends AWS_CONTROLLER
 		$question_info = $this->model('post')->get_thread_info_by_id('question', $answer_info['parent_id']);
 		if (!$question_info)
 		{
-			H::ajax_error((_t('问题不存在')));
+			H::ajax_error((_t('帖子不存在')));
 		}
 
 		$org_question_uid = $question_info['uid'];
@@ -107,7 +107,7 @@ class ajax extends AWS_CONTROLLER
 			$question_info = $this->model('post')->get_thread_info_by_id('question', $question_info['redirect_id']);
 			if (!$question_info)
 			{
-				H::ajax_error((_t('合并问题不存在')));
+				H::ajax_error((_t('合并帖子不存在')));
 			}
 		}
 
@@ -118,12 +118,12 @@ class ajax extends AWS_CONTROLLER
 
 		if ($question_info['lock'])
 		{
-			H::ajax_error((_t('不能讨论锁定的问题')));
+			H::ajax_error((_t('不能讨论锁定的帖子')));
 		}
 
 		if (!$question_info['title'])
 		{
-			H::ajax_error((_t('不能讨论已删除的问题')));
+			H::ajax_error((_t('不能讨论已删除的帖子')));
 		}
 
 		$days = intval($this->user_info['permission']['unallowed_necropost_days']);
@@ -207,7 +207,7 @@ class ajax extends AWS_CONTROLLER
 		$question_info = $this->model('post')->get_thread_info_by_id('question', H::GET('question_id'));
 		if (!$question_info)
 		{
-			H::ajax_error((_t('问题不存在')));
+			H::ajax_error((_t('帖子不存在')));
 		}
 
 		if (!$this->model('publish')->check_user_permission('question_comment', $this->user_info) AND $question_info['uid'] != $this->user_id)
@@ -217,12 +217,12 @@ class ajax extends AWS_CONTROLLER
 
 		if ($question_info['lock'])
 		{
-			H::ajax_error((_t('不能讨论锁定的问题')));
+			H::ajax_error((_t('不能讨论锁定的帖子')));
 		}
 
 		if (!$question_info['title'])
 		{
-			H::ajax_error((_t('不能讨论已删除的问题')));
+			H::ajax_error((_t('不能讨论已删除的帖子')));
 		}
 
 		$days = intval($this->user_info['permission']['unallowed_necropost_days']);
@@ -244,7 +244,7 @@ class ajax extends AWS_CONTROLLER
 
 		if (!$this->model('ratelimit')->check_question_discussion($this->user_id, $this->user_info['permission']['discussion_limit_per_day']))
 		{
-			H::ajax_error((_t('今日讨论问题已经达到上限')));
+			H::ajax_error((_t('今日讨论帖子已经达到上限')));
 		}
 
 		if (H::POST_I('anonymous'))
@@ -278,7 +278,7 @@ class ajax extends AWS_CONTROLLER
 	{
 		if (!$this->user_info['permission']['is_moderator'])
 		{
-			H::ajax_error((_t('对不起, 你没有删除问题的权限')));
+			H::ajax_error((_t('对不起, 你没有删除帖子的权限')));
 		}
 
 		if ($question_info = $this->model('post')->get_thread_info_by_id('question', H::POST('question_id')))
@@ -298,7 +298,7 @@ class ajax extends AWS_CONTROLLER
 
 		if (!$question_info = $this->model('post')->get_thread_info_by_id('question', H::POST('question_id')))
 		{
-			H::ajax_error((_t('问题不存在或已被删除')));
+			H::ajax_error((_t('帖子不存在或已被删除')));
 		}
 
 		if (!$invite_user_info = $this->model('account')->get_user_info_by_uid(H::POST('uid')))
@@ -308,7 +308,7 @@ class ajax extends AWS_CONTROLLER
 
 		if ($invite_user_info['uid'] == $this->user_id)
 		{
-			H::ajax_error((_t('不能邀请自己回复问题')));
+			H::ajax_error((_t('不能邀请自己回复帖子')));
 		}
 
 		if ($this->model('invite')->has_question_invite(H::POST('question_id'), $invite_user_info['uid']))

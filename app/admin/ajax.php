@@ -112,7 +112,7 @@ class ajax extends AWS_ADMIN_CONTROLLER
 
 		if ($this->model('category')->contents_exists($category_id))
 		{
-			H::ajax_error((_t('分类下存在内容, 请先批量移动问题到其它分类, 再删除当前分类')));
+			H::ajax_error((_t('分类下存在内容, 请先批量移动帖子到其它分类, 再删除当前分类')));
 		}
 
 		$this->model('category')->delete_category($category_id);
@@ -260,7 +260,7 @@ class ajax extends AWS_ADMIN_CONTROLLER
 	{
 		if (!H::POST('question_ids'))
 		{
-			H::ajax_error((_t('请选择问题进行操作')));
+			H::ajax_error((_t('请选择帖子进行操作')));
 		}
 
 		switch (H::POST('action'))
@@ -868,7 +868,7 @@ class ajax extends AWS_ADMIN_CONTROLLER
 			switch ($val)
 			{
 				case 'new_answer':  // 新增答案
-				case 'new_question':	// 新增问题
+				case 'new_question':	// 新增帖子
 				case 'new_user':	// 新注册用户
 				case 'new_topic':   // 新增话题
 				case 'new_answer_vote': // 新增答案投票

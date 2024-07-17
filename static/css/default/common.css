@@ -390,7 +390,7 @@ a.aw-load-more-content{display: block;}
 /* 话题编辑 */
 .aw-topic-bar .aw-topic-name{display:inline-block;margin:0 10px 5px 0;}
 
-/* 问题详情页 */
+/* 帖子详情页 */
 .aw-question-detail{margin-bottom:30px;padding:10px 20px 0;}
 .aw-question-detail > .mod-head{position: relative;padding-bottom:14px;border-bottom:1px solid #f0f0f0;}
 .aw-question-detail .mod-head h1{margin:0;font-size:20px;line-height: 30px;}
@@ -445,7 +445,7 @@ a.aw-load-more-content{display: block;}
 .markitup-box ghr{margin: 5px 0;border-color: #000;display: inline-block;}
 .markitup-box hr {margin:0;width: 100%;border-color: #000;display: inline-block;}
 
-/* 问题修改日志 */
+/* 帖子修改日志 */
 .aw-question-edit .mod-head h2{font-size: 20px;}
 .aw-question-edit .mod-head h2 span{font-size: 14px;}
 .aw-question-edit .mod-body{padding:0 20px;}
@@ -494,13 +494,13 @@ a.aw-load-more-content{display: block;}
 .aw-invite-box .mod-footer .next{margin-left: 10px;}
 .aw-invite-box .mod-footer a.active{background-color:#e6e6e6;cursor: default;}
 
-/* 问题列表公共模块 .aw-common-list */
+/* 帖子列表公共模块 .aw-common-list */
 .aw-common-list{width:100%;height:auto;}
 .aw-common-list > div + div{border-top:1px solid #ececec;}
 .aw-common-list .aw-item{position:relative;z-index:0;;min-height:77px;padding:14px 0 14px 50px;}
 .aw-common-list .aw-item .aw-verified{position:absolute;left:-7px;top:-11px;}
 .aw-common-list .aw-item .aw-question-content .aw-user-name{color: #666;}
-/* 问题列表回复统计 */
+/* 帖子列表回复统计 */
 .aw-common-list .aw-question-content h4{margin-bottom:0px;padding-right:20px;font-size:14px;}
 .aw-common-list .aw-question-content > span, .aw-common-list .aw-question-content p span{font-size: 12px;font-weight: normal;color: #999;}
 .aw-common-list .aw-question-content .aw-user-name img{max-width: 24px;}
@@ -509,10 +509,10 @@ a.aw-load-more-content{display: block;}
 .aw-common-list .aw-question-content .contribute span{position: absolute;right:0;top:-20px;}
 .aw-common-list .aw-question-content .contribute img{border-radius: 12px;}
 .aw-common-list .aw-question-content .aw-topic-name{display:inline-block;margin:0 2px 3px;}
-/* 问题列表用户头像 */
+/* 帖子列表用户头像 */
 .aw-common-list .aw-item > .aw-user-name{position:absolute;left:0;top:15px;}
 .aw-common-list .aw-question-content .aw-user-name img{width: 24px;height: 24px;}
-/* 问题列表问题标签 */
+/* 帖子列表帖子标签 */
 .aw-question-tags{display: inline-block;padding:0 5px;height:20px;line-height:20px;background-color:#f2f2f2;font-size: 12px;color: #999;}
 .aw-question-tags:hover{background-color:#ddd;color: #fff;}
 
@@ -536,7 +536,7 @@ a.aw-load-more-content{display: block;}
 .aw-article-content .aw-question-detail .mod-footer a.more-voters{display: inline-block;width: 25px;height: 25px;line-height:18px;border-radius: 15px;background-color: #f1f2f3;text-align: center;vertical-align: middle;color: #cdcecf;}
 .aw-article-content .aw-feed-list .aw-article-reply-box{margin:10px 0 0;padding:0;}
 
-/* 发起问题页面 */
+/* 发起帖子页面 */
 .aw-mod-publish{padding:0 20px 20px;}
 .aw-mod-publish h3{margin-top:30px;}
 .aw-publish-title{position: relative;}
@@ -964,7 +964,7 @@ h1, h2, h3{color: #333;}
 	/*弹窗*/
 	.aw-inbox .modal-dialog, .aw-image-box .modal-dialog, .aw-link-box .modal-dialog, .aw-edit-comment-box .modal-dialog{width: auto;}
 	.aw-tips-box .modal-dialog, .aw-share-box .modal-dialog{width: auto;}
-	/*发起问题页面*/
+	/*发起帖子页面*/
 	.aw-publish-title input, .aw-publish-article .aw-publish-title input {width: 68%;}
 	.aw-publish-title .dropdown {width: 30%;}
 	/*个人页面*/
@@ -1004,7 +1004,7 @@ h1, h2, h3{color: #333;}
 	.aw-publish-title input, .aw-publish-article .aw-publish-title input {width: 58%;}
 	.aw-publish-title .dropdown {width: 40%;}
 	.aw-mod-publish .mod-footer .aw-anonymity {margin:0 20px 0 0;}
-	/* 问题详情页 */
+	/* 帖子详情页 */
 	.aw-question-detail .mod-head h1 {font-size: 16px;}
 	.aw-feed-list .aw-item .mod-footer {padding:0;}
 	/* 话题列表 */
